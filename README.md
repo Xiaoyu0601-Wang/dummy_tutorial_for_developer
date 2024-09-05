@@ -3,6 +3,7 @@ Dummy Tutorial for Developer
 
 # Device List
 ## Raspberry Pi Pico W/WH
+买两个，W和WH各一个，自己练习一下焊接电路板。
 
 ## 创芯科技can卡 CANalyst-II分析仪 Linux版
 Materials: https://www.zhcxgd.com/h-nd-77.html
