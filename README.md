@@ -19,6 +19,7 @@ https://item.taobao.com/item.htm?_u=59g672ob638&id=702622757730&spm=a1z09.2.0.0.
 https://detail.tmall.com/item.htm?_u=59g672o305c&id=645061129098&spm=a1z09.2.0.0.37c52e8dM3gBdP
 
 ## 杜邦线
+20cm，买个五排
 
 # Github
 ## Github SSH PublicKey
