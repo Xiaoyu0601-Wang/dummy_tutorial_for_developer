@@ -1,0 +1,58 @@
+C51 COMPILER V9.54   MAIN                                                                  09/30/2024 10:02:09 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\keilC51\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "delay.h"
+   3          #include "exti0.h"
+   4          
+   5          typedef unsigned int u16; //对系统默认数据类型进行重定义
+   6          typedef unsigned char u8;
+   7          
+   8          //定义LED1管脚
+   9          sbit LED1=P2^0;
+  10          
+  11          //定义独立按键K3控制脚
+  12          sbit KEY3=P3^2;
+  13          
+  14          /*
+  15          * 函 数 名       : main
+  16          * 函数功能     : 主函数
+  17          * 输    入       : 无
+  18          * 输    出       : 无
+  19          */
+  20          void main()
+  21          { 
+  22   1        exti0_init();//外部中断0配置
+  23   1      
+  24   1        while(1)
+  25   1        {     
+  26   2                    
+  27   2        }   
+  28   1      }
+  29          
+  30          void exti0() interrupt 0 //外部中断0中断函数
+  31          {
+  32   1        delay_10us(1000);//消抖，按键接通信号稳定后再执行
+  33   1        if(KEY3==0)//再次判断K3键是否按下
+  34   1          LED1=!LED1;//LED1状态翻转         
+  35   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     73    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
