@@ -1,4 +1,8 @@
-## Nvidia Jetson Orin NX
+# Nvidia Jetson Orin NX
+
+## System installation and update by using SDKManager
+https://docs.isarsoft.com/administration/install-jetpack/
+
 Nvidia Jetson Orin NX won't wake up after suspend (deep sleep), so use command below to disable suspend:
 
 ### Modify systemd Sleep Settings
