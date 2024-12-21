@@ -23,7 +23,10 @@ echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 ### Install colcon
 ```sh
 sudo apt install python3-colcon-common-extensions
-% test
+# test
+mkdir -p ~/ros2_ws/src
+cd ros2_ws/
+colcon build
 ```
 
 ## ROS Related Command
