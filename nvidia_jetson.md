@@ -1,7 +1,12 @@
 # Nvidia Jetson Orin NX
 
 ## Hardware Introduction
+Mother Board:
 https://www.waveshare.com/wiki/JETSON-ORIN-NX-16G-DEV-KIT
+Keyboard:
+ThinkPad TrackPoint Keyboard II
+Monitor:
+GeChic Corporation 15.6inch On-Lap T151A FHD 1920x1080 IPS 10 Touch
 
 ## System installation and update by using SDKManager
 https://docs.isarsoft.com/administration/install-jetpack/
