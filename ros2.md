@@ -1,6 +1,12 @@
 # ROS2
 
-## Installation
+## Installation By Script
+Make executable:
+`chmod +x install_ros2.sh`
+Run with:
+`./install_ros2.sh`
+
+## Installation Step By Step
 Reference: https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html
 ```sh
 sudo apt install software-properties-common
