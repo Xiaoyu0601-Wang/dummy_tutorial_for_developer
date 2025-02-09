@@ -47,9 +47,33 @@ sudo nano /etc/ssh/sshd_config
 ```
 
 ## Install Texstudio and texlive
+### Installation
 ```sh
 # Install Texstudio editor in snap store, then install texlive from terminal:
 sudo apt-get install texlive-full
 # Pregenerating ConTeXt MarkIV format. This may take some time...
 # Keep pressing the key Return about 10 times and the install went on.
 ```
+### Interface Config
+#### Load config file
+
+Go to menu bar -> Click in `Options`  -> Click on `Load Profile...`
+
+
+#### Dark IDE
+
+Firstly, this repo was intended for only helping to replace the text editor colors but as soon as I realize that `TeXstudio` have various dark IDE themes I decided to add it.  
+Basically you could only change the text editor colors or change the text editor colors + the IDE theme  
+To change to the dark IDE theme:
+
+1. Go to menu bar -> Click in `Options`  -> Click on `Configure TeXstudio...`
+2. In the Configure TeXstudio window clic on `General` tab.
+3. In the `Appereance` group choose the style of your preference
+4. In `Color Scheme` select `Modern - dark`
+5. Clic OK, most times no need to restart TeXstudio
+6. If TeXstudio does not look full dark repeat step 1 and continue with the next steps, if does restart TeXstudio
+7. In the left-bottom corner mark the `Show Advanced Options` checkbox
+8. In the `General` tab, in the `Appereance` group mark the `Ignore Most System Colors` checkbox
+9. Restart TeXstudio
+
+Now we can proceed to change the text editor colors.
