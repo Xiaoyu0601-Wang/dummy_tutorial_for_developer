@@ -45,3 +45,11 @@ sudo nano /etc/ssh/sshd_config
 # Uncomment it (remove #) and change 22 to your new port, e.g.:
 # Port 22
 ```
+
+## Install Texstudio and texlive
+```sh
+# Install Texstudio editor in snap store, then install texlive from terminal:
+sudo apt-get install texlive-full
+# Pregenerating ConTeXt MarkIV format. This may take some time...
+# Keep pressing the key Return about 10 times and the install went on.
+```
