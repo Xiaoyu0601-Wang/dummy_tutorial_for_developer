@@ -24,6 +24,9 @@ sudo apt install ros-dev-tools
 
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 . ~/.bashrc
+
+# Use the following command to check ROS2 is installed correctly or not
+ros2 run demo_nodes_cpp talker
 ```
 
 ### Install colcon
