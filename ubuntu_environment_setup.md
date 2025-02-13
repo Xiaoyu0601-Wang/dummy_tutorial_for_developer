@@ -45,6 +45,16 @@ sudo nano /etc/ssh/sshd_config
 # Uncomment it (remove #) and change 22 to your new port, e.g.:
 # Port 22
 ```
+Enable SSH shell color output, add these lines to `~/.bashrc`:
+```sh
+alias ls='ls --color=auto'  # Linux
+alias ls='ls -G'            # macOS
+export CLICOLOR=1           # macOS 启用颜色
+export LSCOLORS="ExGxFxdaCxDaDahbadacec"  # macOS 颜色方案
+alias grep='grep --color=auto'
+export TERM=xterm-256color
+export PS1='\[\e[1;32m\]\u@\h:\w\$\[\e[0m\] '  # 绿色提示符
+```
 
 ## Install Texstudio and texlive
 ### Installation
