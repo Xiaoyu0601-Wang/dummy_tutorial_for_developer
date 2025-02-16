@@ -1,6 +1,4 @@
 # Radxa SBC
-https://netplan.readthedocs.io/en/latest/netplan-yaml/#properties-for-device-type-wifis
-https://github.com/Joshua-Riek/ubuntu-rockchip/wiki/Ubuntu-24.04-LTS
 
 ## Install U-Boot to an SD Card or eMMC
 Installing the latest bootloader version to your eMMC can be done with the below command:
@@ -18,3 +16,8 @@ sudo ubuntu-rockchip-install /dev/mmcblk0
 Ubuntu Noble 24.04 LTS
 
 ROS2 Rolling
+
+## Reference
+https://netplan.readthedocs.io/en/latest/netplan-yaml/#properties-for-device-type-wifis
+https://github.com/Joshua-Riek/ubuntu-rockchip/wiki/Ubuntu-24.04-LTS
+https://wiki.radxa.com/Rock3/Debian/device-tree-overlays
