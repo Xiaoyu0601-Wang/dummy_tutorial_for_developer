@@ -1,12 +1,14 @@
 # ROS2
 
-## Installation By Script
+## ROS2 Installation
+
+### Install By Script
 Make executable:
 `chmod +x install_ros2.sh`
 Run with:
 `./install_ros2.sh`
 
-## Installation Step By Step
+### Install Step By Step
 Reference: https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html
 ```sh
 sudo apt install software-properties-common
@@ -29,6 +31,8 @@ echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 ros2 run demo_nodes_cpp talker
 ```
 
+## Package Build
+
 ### Install colcon
 ```sh
 sudo apt install python3-colcon-common-extensions
@@ -36,6 +40,11 @@ sudo apt install python3-colcon-common-extensions
 mkdir -p ~/ros2_ws/src
 cd ros2_ws/
 colcon build
+```
+
+### Build Specific Package
+```sh
+colcon build --symlink-install --packages-select my_package
 ```
 
 ## ROS Related Command
