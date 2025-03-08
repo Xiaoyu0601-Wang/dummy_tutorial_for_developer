@@ -6,6 +6,10 @@ https://www.youtube.com/watch?v=m5U1PgqfGiA&t=215s
 ### From Windows to Ubuntu
 ### From Ubuntu to Windows
 
+## VS Code
+### Extension Installation
+Draw.io Integration
+
 ## Byobu
 A tool which can separate terminal window.
 ```sudo apt-get install byobu```
