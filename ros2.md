@@ -33,6 +33,11 @@ ros2 run demo_nodes_cpp talker
 
 ## Package Build
 
+### Create Package
+```sh
+ros2 pkg create new_package_name --build-type ament_cmake --dependencies rclcpp std_msgs
+```
+
 ### Install colcon
 ```sh
 sudo apt install python3-colcon-common-extensions
