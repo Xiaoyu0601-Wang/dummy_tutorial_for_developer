@@ -87,3 +87,16 @@ To change to the dark IDE theme:
 9. Restart TeXstudio
 
 Now we can proceed to change the text editor colors.
+
+## OpenGL
+### Install Basic OpenGL Packages
+```sh
+sudo apt update
+sudo apt install mesa-utils libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev
+```
+
+### Verify Installation
+Check if OpenGL is working:
+```sh
+glxinfo | grep "OpenGL version"
+```
