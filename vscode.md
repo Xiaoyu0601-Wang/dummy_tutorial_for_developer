@@ -1,0 +1,2 @@
+# Plugin
+LaTeX Workshop
