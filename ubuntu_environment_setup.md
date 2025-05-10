@@ -157,3 +157,15 @@ Choose display output
 ```sh
 sudo prime-select on-demand  # 混合模式
 ```
+
+Troubleshoot
+```sh
+# Create file:
+sudo nano /etc/modprobe.d/nvidia-timeout.conf
+# Add the code bellow:
+options nvidia NVreg_RegistryDwords="RmPowerOnTimeout=60000"
+# Reload Nvidia mod
+sudo rmmod nvidia_drm nvidia_modeset nvidia_uvm nvidia
+sudo modprobe nvidia
+sudo reboot
+```
