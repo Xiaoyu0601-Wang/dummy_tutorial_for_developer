@@ -1,3 +1,21 @@
+- [Github](#github)
+  - [Github SSH PublicKey](#github-ssh-publickey)
+  - [Github Submodule](#github-submodule)
+- [ssh](#ssh)
+  - [Install OpenSSH Server](#install-openssh-server)
+  - [Configure Firewall (If Enabled)](#configure-firewall-if-enabled)
+  - [Edit the SSH Configuration File](#edit-the-ssh-configuration-file)
+- [Install Texstudio and texlive](#install-texstudio-and-texlive)
+  - [Installation](#installation)
+  - [Interface Config](#interface-config)
+    - [Load config file](#load-config-file)
+    - [Dark IDE](#dark-ide)
+- [OpenGL](#opengl)
+  - [Install Basic OpenGL Packages](#install-basic-opengl-packages)
+  - [Verify Installation](#verify-installation)
+- [eGPU](#egpu)
+
+
 ## Github
 ### Github SSH PublicKey
 Use the URL below to set the public key for SSH: https://docs.github.com/en/authentication
@@ -99,4 +117,43 @@ sudo apt install mesa-utils libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev
 Check if OpenGL is working:
 ```sh
 glxinfo | grep "OpenGL version"
+```
+
+## eGPU
+```sh
+sudo apt update
+sudo apt install bolt thunderbolt-tools
+```
+NVIDIA GPU:
+```sh
+sudo ubuntu-drivers autoinstall  # 自动安装推荐驱动
+sudo reboot
+sudo usermod -aG video,plugdev $USER  # 确保用户属于 video 和 plugdev 组
+nvidia-smi  # Check nvidia driver
+```
+AMD GPU:
+```sh
+sudo apt install mesa-utils mesa-vulkan-drivers
+```
+
+授权设备：
+使用 boltctl 命令列出设备：
+```sh
+sudo boltctl list
+```
+Authorize device:
+```sh
+sudo boltctl authorize <device UUID>
+```
+
+Check GPU:
+Check PCI device:
+lspci | grep -i vga  # 应显示eGPU的显卡信息
+Check driver installation:
+lsmod | grep -i nvidia  # 或 amdgpu
+
+Choose display output
+使用PRIME Offload(NVIDIA):
+```sh
+sudo prime-select on-demand  # 混合模式
 ```
