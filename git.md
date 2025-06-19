@@ -1,3 +1,16 @@
+- [Install git](#install-git)
+- [Setting your user name and email address](#setting-your-user-name-and-email-address)
+- [Rules for Git commit](#rules-for-git-commit)
+- [Submission process](#submission-process)
+
+
+# Install git
+```sudo apt-get install git```
+
+# Setting your user name and email address
+git config --global user.name "Mona Lisa"
+git config --global user.email "YOUR_EMAIL"
+
 # Rules for Git commit
 1. Add new feature:```feat: xxxxxxxxxxxxxxx```
 2. Update content:```update: xxxxxxxxxxxxxxx```
