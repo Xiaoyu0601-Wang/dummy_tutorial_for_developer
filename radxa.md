@@ -15,6 +15,9 @@ sudo ubuntu-rockchip-install /dev/mmcblk0
 ## Radxa Zero 3W
 Ubuntu Noble 24.04 LTS
 
+## Radxa Zero 3E
+Ubuntu Noble 24.04 LTS
+
 ROS2 Rolling
 
 ## Reference
