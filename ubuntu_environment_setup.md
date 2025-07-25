@@ -5,6 +5,7 @@
   - [Install OpenSSH Server](#install-openssh-server)
   - [Configure Firewall (If Enabled)](#configure-firewall-if-enabled)
   - [Edit the SSH Configuration File](#edit-the-ssh-configuration-file)
+- [Install Keyboard Input](#install-keyboard-input)
 - [Install Texstudio and texlive](#install-texstudio-and-texlive)
   - [Installation](#installation)
   - [Interface Config](#interface-config)
@@ -73,6 +74,19 @@ alias grep='grep --color=auto'
 export TERM=xterm-256color
 export PS1='\[\e[1;32m\]\u@\h:\w\$\[\e[0m\] '  # 绿色提示符
 ```
+
+
+## Install Keyboard Input
+```sh
+sudo apt-get update
+# Install Chinese
+sudo apt install fcitx5 fcitx5-chinese-addons fcitx5-rime
+# Install Japanese
+sudo apt install fcitx5-mozc
+# Configuration
+im-config -n fcitx5
+```
+
 
 ## Install Texstudio and texlive
 ### Installation
