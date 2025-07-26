@@ -78,6 +78,8 @@ export PS1='\[\e[1;32m\]\u@\h:\w\$\[\e[0m\] '  # 绿色提示符
 
 ## Install Keyboard Input
 ```sh
+# Delete ibus
+sudo apt purge ibus
 sudo apt-get update
 # Install Chinese
 sudo apt install fcitx5 fcitx5-chinese-addons fcitx5-rime
@@ -85,6 +87,18 @@ sudo apt install fcitx5 fcitx5-chinese-addons fcitx5-rime
 sudo apt install fcitx5-mozc
 # Configuration
 im-config -n fcitx5
+# Add fcitx5 to startup
+mkdir -p ~/.config/autostart
+nano ~/.config/autostart/fcitx5.desktop
+# Add the content below in the file
+[Desktop Entry]
+Type=Application
+Exec=fcitx5 -d
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Fcitx5
+Comment=Input Method
 ```
 
 
