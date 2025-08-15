@@ -20,17 +20,12 @@
 
 ### 准备工作
 1. 从[Ubuntu官网](https://ubuntu.com/download/desktop)下载 Ubuntu 24.04 LTS ISO 镜像
-2. 制作启动U盘（推荐使用[Rufus](https://rufus.ie/)或[BalenaEtcher](https://www.balena.io/etcher/)）
-3. 备份重要数据
+2. 制作启动U盘（推荐使用[BalenaEtcher](https://www.balena.io/etcher/)）
 
 ### 安装步骤
 1. 插入启动U盘并重启电脑，进入BIOS/UEFI设置U盘为第一启动项
 2. 选择"Install Ubuntu"
-3. 分区建议：
-   - EFI分区：512MB（如已存在可忽略）
-   - 交换空间：内存大小的1-2倍（可选）
-   - 根分区`/`：至少50GB（推荐100GB以上）
-   - 家目录`/home`：剩余空间
+3. 分区建议：至少500GB（双系统推荐150GB以上）
 4. 设置用户名、密码和计算机名
 5. 完成安装后重启
 
@@ -99,16 +94,9 @@ new_ubuntu_enviroment_setup.sh
 ```bash
 # 更新系统
 sudo apt update && sudo apt upgrade -y
-
-# 安装中文支持
-sudo apt install language-pack-zh-hans -y
-
-# 设置时区
-sudo timedatectl set-timezone Asia/Shanghai
 ```
 
 ---
-
 ## github使用指南
 ### 说明 
 Git 是最常用的版本控制工具，用于管理代码和协作开发。 开始前请先注册github账号
@@ -353,7 +341,7 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt update​
 sudo apt install -y sublime-text​
 ```
-### Octave（MATLAB 替代品，数值计算）
+### Octave（MATLAB替代品，数值计算）
 1.安装 Octave
 ```bash
 sudo apt update
