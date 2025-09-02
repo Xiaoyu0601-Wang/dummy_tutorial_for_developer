@@ -47,6 +47,11 @@ cd ros2_ws/
 colcon build
 ```
 
+### How to build
+```sh
+colcon build --symlink-install --parallel-workers 2
+```
+
 ### Build Specific Package
 ```sh
 colcon build --symlink-install --packages-select my_package
