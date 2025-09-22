@@ -18,7 +18,7 @@ Ubuntu Noble 24.04 LTS
 ## Radxa Zero 3E
 Ubuntu Noble 24.04 LTS
 
-ROS2 Rolling
+ROS2 Rolling or Jazzy
 
 ## Reference
 https://netplan.readthedocs.io/en/latest/netplan-yaml/#properties-for-device-type-wifis

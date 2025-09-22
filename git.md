@@ -3,14 +3,22 @@
 - [Generate Github SSH public key](#generate-github-ssh-public-key)
 - [Rules for Git commit](#rules-for-git-commit)
 - [Submission process](#submission-process)
+- [Common used command](#common-used-command)
 
 
 # Install git
 ```sudo apt-get install git```
 
 # Setting your user name and email address
+第一次使用 Git 时，需要设置用户名和邮箱，以便提交记录中显示
+```sh
+# Set global user name
 git config --global user.name "YOUR_GITHUB_ID"
+# Set global email address
 git config --global user.email "YOUR_REGUSTER_EMAIL"
+# Check configuration
+git config --list
+```
 
 # Generate Github SSH public key
 Use the URL below to set the public key for SSH: https://docs.github.com/en/authentication
@@ -32,12 +40,40 @@ Copy the content in .pub file. Then go to Github ```Settings``` -> ```SSH and PG
 2. Go to the repository directory, create and switch a new branch：
 	```git checkout -b feat/xxxxxxx```
 3. Modify the content according to the rules
-4. Add your modifications and submit：
+4. Add your modifications and submit:
 	```git add .```
+5. Add you commit content:
 	```git commit -m "feat: xxxxxx"```
-5. Upload the modification branch to the github:
+6. Upload the modification branch to the github:
 	```git push origin feat/xxxxxx```
-6. Submit the merger request on GitHub, note the changes, and select the verifier. After the review is passed, confirm the merge and delete the branch.
-7. Update your local repository
+7. Submit the merger request on GitHub, note the changes, and select the verifier. After the review is passed, confirm the merge and delete the branch.
+8. Update your local repository from `main`:
 	```git pull origin main```
 
+# Common used command
+```sh
+# 克隆仓库
+git clone https://github.com/用户名/仓库名.git
+# 添加修改暂存区
+git add 文件名       # 添加单个文件
+git add .           # 添加当前目录下所有修改
+# 提交修改
+git commit -m "提交说明"
+#推送到github
+git push origin 分支名
+#拉取更新
+git pull origin 分支名
+#分支管理
+# 查看本地分支
+git branch
+# 创建新分支
+git checkout -b 新分支名
+# 切换分支
+git checkout 分支名
+# 合并分支
+git merge 分支名
+# 删除本地分支
+git branch -d 分支名
+# 删除远程分支
+git push origin --delete 分支名
+```

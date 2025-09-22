@@ -18,15 +18,15 @@ ROS_VERSION=""
 
 # Set corresponding ROS version
 case $UBUNTU_VERSION in
+    "noble")    # Ubuntu 24.04
+        ROS_VERSION="jazzy"
+        ;;
     "jammy")    # Ubuntu 22.04
         ROS_VERSION="humble"
         ;;
-    "focal")    # Ubuntu 20.04
-        ROS_VERSION="foxy"
-        ;;
     *)
         echo -e "${RED}Error: Unsupported system version $UBUNTU_VERSION${NC}"
-        echo "Supported versions: Ubuntu 22.04 (jammy) or 20.04 (focal)"
+        echo "Supported versions: Ubuntu 24.04 (noble) or 22.04 (jammy)"
         exit 1
         ;;
 esac
