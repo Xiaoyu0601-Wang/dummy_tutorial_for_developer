@@ -28,3 +28,8 @@ Easiest: install serve and run a local server:
 npm install -g serve
 serve -s build
 ```
+
+Start website test:
+```sh
+npm start
+```
