@@ -45,27 +45,35 @@ START_TIME=$(date +%s)
 
 # Step 1: Configure locales
 echo -e "${GREEN}[1/5] Configuring locales...${NC}"
-# sudo apt update && sudo apt install -y locales
-# sudo locale-gen en_US en_US.UTF-8
-# sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-# export LANG=en_US.UTF-8
+sudo apt update
+sudo apt install -y locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Step 2: Add ROS 2 repository
 echo -e "${GREEN}[2/5] Adding repository...${NC}"
 sudo apt install software-properties-common
 sudo add-apt-repository universe
+sudo apt update
 sudo apt install -y curl
-sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $UBUNTU_VERSION main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F\" '{print $4}')
+curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo ${UBUNTU_CODENAME:-${VERSION_CODENAME}})_all.deb"
+sudo dpkg -i /tmp/ros2-apt-source.deb
+# sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+# echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $UBUNTU_VERSION main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
 # Step 3: Install ROS 2 packages
 echo -e "${GREEN}[3/5] Installing ROS 2 packages...${NC}"
 sudo apt update
+sudo apt install ros-dev-tools
+sudo apt update
+sudo apt upgrade
 sudo apt install -y ros-$ROS_VERSION-desktop
 
 # Step 4: Install development tools
 echo -e "${GREEN}[4/5] Installing development tools...${NC}"
-sudo apt install ros-dev-tools
+# sudo apt install ros-dev-tools
 sudo apt install -y python3-rosdep python3-colcon-common-extensions
 sudo rosdep init
 rosdep update
