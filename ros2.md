@@ -35,7 +35,7 @@ ros2 run demo_nodes_cpp talker
 
 ### Create Package
 ```sh
-ros2 pkg create new_package_name --build-type ament_cmake --dependencies rclcpp std_msgs
+ros2 pkg create new_package_name --build-type ament_cmake --license Apache-2.0 --dependencies rclcpp std_msgs
 ```
 
 ### Install colcon
