@@ -50,6 +50,12 @@ Copy the content in .pub file. Then go to Github ```Settings``` -> ```SSH and PG
 8. Update your local repository from `main`:
 	```git pull origin main```
 
+# Rules for Github PR
+1. PR title should be like ```feat: xxxxxxxxxxxxx```
+2. If one PR is cherry-pick, then title should be like ```feat(cherry-pick): xxxxxxxxxxx```
+3. Don't forget to write some descriptions.
+4. If possible, don't submit too much modifications in one PR.
+
 # Common used command
 ```sh
 # 克隆仓库
