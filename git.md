@@ -55,6 +55,7 @@ Copy the content in .pub file. Then go to Github ```Settings``` -> ```SSH and PG
 2. If one PR is cherry-pick, then title should be like ```feat(cherry-pick): xxxxxxxxxxx```
 3. Don't forget to write some descriptions.
 4. If possible, don't submit too much modifications in one PR.
+5. Don't forget to add reviewers.
 
 # Common used command
 ```sh
